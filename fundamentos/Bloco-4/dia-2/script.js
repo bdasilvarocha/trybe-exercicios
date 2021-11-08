@@ -38,10 +38,16 @@ if (impares > 0){
     console.log('Nenhum valor impar foi encontrado');
 }*/
 
-let menor = numbers[0];
+/*let menor = numbers[0];
 for (let index = 1; index < numbers.length; index += 1){
     if (numbers[index] < menor){
         menor = numbers[index];
     } 
 }
-console.log(menor);
+console.log(menor);*/
+
+let newNumbers = [];
+for (let index = 1; index <= 25; index += 1){
+    newNumbers.push(index);
+}
+console.log(newNumbers);
