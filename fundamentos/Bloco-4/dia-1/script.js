@@ -1,9 +1,9 @@
-const myName = "Bruno";
-const birthCity = "Brasilia";
-let birthYear = 1993;
-console.log("Meu nome eh " + myName + ", nasci em " + birthCity + " no ano de " + birthYear);
-birthYear = 2030;
-console.log(birthYear);
-
-birthCity = "Patos de Minas";
-console.log(birthCity);
+const nota = 80;
+if (nota >= 80) {
+    console.log("Parabens, voce foi aprovada(o)!!")
+} 
+else if (nota < 80 && nota >= 60) {
+    console.log("Voce esta na nossa lista de espera.")
+}
+else 
+    console.log("Voce foi reprovada(o).")
