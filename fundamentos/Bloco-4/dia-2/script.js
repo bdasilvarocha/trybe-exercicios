@@ -26,7 +26,7 @@ for (let index = 0; index < numbers.length; index += 1){
 }
 console.log(maior);*/
 
-let impares = 0;
+/*let impares = 0;
 for (let index = 0; index < numbers.length; index += 1){
     if (numbers[index] % 2 == 1) {
         impares +=1;
@@ -36,4 +36,12 @@ if (impares > 0){
     console.log('O array possui ' + impares + ' valores impares');
 } else{
     console.log('Nenhum valor impar foi encontrado');
+}*/
+
+let menor = numbers[0];
+for (let index = 1; index < numbers.length; index += 1){
+    if (numbers[index] < menor){
+        menor = numbers[index];
+    } 
 }
+console.log(menor);
