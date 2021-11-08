@@ -5,7 +5,8 @@ let soma = 0;
 //    console.log (numbers[index]);}
 
 /*for (let index = 0; index < numbers.length; index += 1){
-    soma += numbers[index]};
+    soma += numbers[index];
+}
     console.log(soma);
 
 let media = soma / numbers.length;
@@ -17,10 +18,22 @@ console.log(media);*/
     console.log('Valor menor que 20');
 }*/
 
-let maior = 0;
+/*let maior = 0;
 for (let index = 0; index < numbers.length; index += 1){
     if (numbers[index] > maior){
         maior = numbers[index];
     } 
 }
-console.log(maior);
+console.log(maior);*/
+
+let impares = 0;
+for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index] % 2 == 1) {
+        impares +=1;
+    }
+}
+if (impares > 0){
+    console.log('O array possui ' + impares + ' valores impares');
+} else{
+    console.log('Nenhum valor impar foi encontrado');
+}
