@@ -23,4 +23,4 @@ for (let index = 0; index < 10; index += 1) {
 let produto = "queijo";
 linha = 7; 
 sacola[(linha - 1)].splice(ingredientes.indexOf(produto), 1) 
-console.log(sacola); 
+console.log(sacola);
