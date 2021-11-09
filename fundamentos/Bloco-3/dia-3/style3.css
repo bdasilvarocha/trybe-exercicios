@@ -1,0 +1,13 @@
+h1, p {
+    text-align: center;
+}
+li:hover {
+    background-color: grey;
+    width: fit-content;
+}
+a:active {
+    color: whitesmoke;
+}
+li {
+    list-style: none;
+}
