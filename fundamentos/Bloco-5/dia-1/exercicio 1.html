@@ -48,7 +48,7 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()*/
         // Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-    document.getElementsByTagName('p')[0].innerText = 'Onde quero estar daqui 2 anos ?';
+    document.getElementsByTagName('p')[0].innerText = 'Onde quero estar daqui 2 anos?';
     document.getElementsByTagName('p')[1].innerText = 'Vou estar trabalhando na XP Inc.';
     document.getElementsByTagName('p')[2].innerText = 'E ajudando novos estudantes na Trybe.' 
 
@@ -62,7 +62,16 @@
     document.getElementsByClassName('title')[0].innerText = 'Exercício 5.1 - JavaScript - Aprendendo DOM';
     
         // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+    let upperCase = document.getElementsByTagName('p');
+    for (let i = 0; i < upperCase.length; i += 1) {
+        upperCase[i].innerText = upperCase[i].innerText.toUpperCase();
+    }
+    
         // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+    let paragraph = document.getElementsByTagName('p');
+    for (let i= 0; i < paragraph.length; i += 1) {
+        console.log(paragraph[i].innerHTML);
+    }
     
     </script>
   </body>
