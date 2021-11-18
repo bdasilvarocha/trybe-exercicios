@@ -76,7 +76,13 @@
         let p = document.createElement('p');
         p.innerText = 'Treinando as utilidades do JavaScript com DOM';
         document.getElementsByTagName('section')[0].appendChild(p);
+    
+    // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+        let section2 = document.createElement('section');
+        section2.className = 'left-content';
+        document.querySelector('main').appendChild(section2);
 
+    
 
     </script>
   </body>
