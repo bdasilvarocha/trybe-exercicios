@@ -63,3 +63,14 @@ function createDaysOfTheWeek() {
         });
     }
     mudaCorDiaFeriado();
+
+// 4.
+    const str2 = 'Sexta-feira';
+    function btnFriday(str2) {
+        const butoes = document.getElementsByClassName('buttons-container')[0];
+        const fridayButao = document.createElement('button');
+        fridayButao.innerText = str2;
+        fridayButao.id = 'btn-friday';
+        butoes.appendChild(fridayButao);
+};
+btnFriday(str2);
