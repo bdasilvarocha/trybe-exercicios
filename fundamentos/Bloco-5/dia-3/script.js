@@ -112,10 +112,20 @@ btnFriday(str2);
 
     // 7.
     const tarefas = document.createElement('span');
+    const myTasks = document.querySelector('.my-tasks');
     function addTarefa (str3) {
-        let myTasks = document.querySelector('.my-tasks');
         myTasks.appendChild(tarefas);
         tarefas.innerText = str3;
     }
     let str3 = 'Cozinhar'
     addTarefa(str3);
+
+    // 8.
+    const criaDiv = document.createElement('div');
+    function corDeFundoTarefa (cor){
+        myTasks.appendChild(criaDiv);
+        criaDiv.className = 'task';
+        criaDiv.style.backgroundColor = cor;
+    }
+    let cor = 'red';
+    corDeFundoTarefa (cor);
