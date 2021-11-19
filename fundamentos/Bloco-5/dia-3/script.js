@@ -34,7 +34,7 @@ function createDaysOfTheWeek() {
     diasDoCalendario();
 
 // 2.
-    const str = 'Feriados'
+    const str = 'Feriados';
     function btnFeriados(str) {
         const butoes = document.getElementsByClassName('buttons-container')[0];
         const feriadoButao = document.createElement('button');
@@ -43,4 +43,23 @@ function createDaysOfTheWeek() {
         butoes.appendChild(feriadoButao);
     };
     btnFeriados(str);
+
+// 3.
     
+    function mudaCorDiaFeriado() {
+        const butaoFeriado = document.querySelector('#btn-holiday');
+        const diaHoliday = document.querySelectorAll('.holiday');
+        const newColor = 'orange';
+        const oldColor = 'rgb (238,238,238)';
+
+        butaoFeriado.addEventListener('click', function () {
+            for (let i = 0; i < diaHoliday.length; i += 1) {    
+                if (diaHoliday[i].style.backgroundColor === newColor) {
+                diaHoliday[i].style.backgroundColor = oldColor;
+                } else {
+                diaHoliday[i].style.backgroundColor = newColor;
+                }
+            }
+        });
+    }
+    mudaCorDiaFeriado();
