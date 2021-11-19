@@ -49,8 +49,8 @@ function createDaysOfTheWeek() {
     function mudaCorDiaFeriado() {
         const butaoFeriado = document.querySelector('#btn-holiday');
         const diaHoliday = document.querySelectorAll('.holiday');
-        const newColor = 'orange';
-        const oldColor = 'rgb (238,238,238)';
+        let newColor = 'orange';
+        let oldColor = 'rgb (238,238,238)';
 
         butaoFeriado.addEventListener('click', function () {
             for (let i = 0; i < diaHoliday.length; i += 1) {    
@@ -74,3 +74,22 @@ function createDaysOfTheWeek() {
         butoes.appendChild(fridayButao);
 };
 btnFriday(str2);
+
+// 5.
+function mudaCorDiaFriday() {
+    let butaoFriday = document.querySelector('#btn-friday');
+    let diaFriday = document.querySelectorAll('.friday');
+    let newColor = 'pink';
+    let oldColor = 'rgb (238,238,238)';
+
+    butaoFriday.addEventListener('click', function () {
+        for (let i = 0; i < diaFriday.length; i += 1) {    
+            if (diaFriday[i].style.backgroundColor === newColor) {
+            diaFriday[i].style.backgroundColor = oldColor;
+            } else {
+            diaFriday[i].style.backgroundColor = newColor;
+            }
+        }
+    });
+}
+mudaCorDiaFriday();
