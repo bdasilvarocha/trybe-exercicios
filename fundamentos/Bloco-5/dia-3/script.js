@@ -50,7 +50,7 @@ function createDaysOfTheWeek() {
         const butaoFeriado = document.querySelector('#btn-holiday');
         const diaHoliday = document.querySelectorAll('.holiday');
         let newColor = 'orange';
-        let oldColor = 'rgb (238,238,238)';
+        let oldColor = 'rgb(238,238,238)';
 
         butaoFeriado.addEventListener('click', function () {
             for (let i = 0; i < diaHoliday.length; i += 1) {    
@@ -76,20 +76,20 @@ function createDaysOfTheWeek() {
 btnFriday(str2);
 
 // 5.
-function mudaCorDiaFriday() {
+function mudaTextoFriday(arrFriday) {
     let butaoFriday = document.querySelector('#btn-friday');
     let diaFriday = document.querySelectorAll('.friday');
-    let newColor = 'pink';
-    let oldColor = 'rgb (238,238,238)';
+    let newText = "Its friday day!"
 
     butaoFriday.addEventListener('click', function () {
         for (let i = 0; i < diaFriday.length; i += 1) {    
-            if (diaFriday[i].style.backgroundColor === newColor) {
-            diaFriday[i].style.backgroundColor = oldColor;
+            if (diaFriday[i].innerText !== newText) {
+                diaFriday[i].innerText = newText;
             } else {
-            diaFriday[i].style.backgroundColor = newColor;
+                diaFriday[i].innerText = arrFriday[i];
             }
         }
     });
 }
-mudaCorDiaFriday();
+let dezArray = [4, 11, 18, 25];
+mudaTextoFriday(dezArray);
