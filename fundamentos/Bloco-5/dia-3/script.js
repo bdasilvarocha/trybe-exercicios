@@ -110,4 +110,12 @@ btnFriday(str2);
     }
     removeZoom();
 
-    
+    // 7.
+    const tarefas = document.createElement('span');
+    function addTarefa (str3) {
+        let myTasks = document.querySelector('.my-tasks');
+        myTasks.appendChild(tarefas);
+        tarefas.innerText = str3;
+    }
+    let str3 = 'Cozinhar'
+    addTarefa(str3);
