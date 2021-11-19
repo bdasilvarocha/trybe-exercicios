@@ -72,24 +72,42 @@ function createDaysOfTheWeek() {
         fridayButao.innerText = str2;
         fridayButao.id = 'btn-friday';
         butoes.appendChild(fridayButao);
-};
+    }
 btnFriday(str2);
 
 // 5.
-function mudaTextoFriday(arrFriday) {
-    let butaoFriday = document.querySelector('#btn-friday');
-    let diaFriday = document.querySelectorAll('.friday');
-    let newText = "Its friday day!"
+    function mudaTextoFriday(arrFriday) {
+        let butaoFriday = document.querySelector('#btn-friday');
+        let diaFriday = document.querySelectorAll('.friday');
+        let newText = "Its friday day!"
 
-    butaoFriday.addEventListener('click', function () {
-        for (let i = 0; i < diaFriday.length; i += 1) {    
-            if (diaFriday[i].innerText !== newText) {
-                diaFriday[i].innerText = newText;
-            } else {
-                diaFriday[i].innerText = arrFriday[i];
+        butaoFriday.addEventListener('click', function () {
+            for (let i = 0; i < diaFriday.length; i += 1) {    
+                if (diaFriday[i].innerText !== newText) {
+                    diaFriday[i].innerText = newText;
+                } else {
+                    diaFriday[i].innerText = arrFriday[i];
+                }
             }
-        }
-    });
-}
-let dezArray = [4, 11, 18, 25];
-mudaTextoFriday(dezArray);
+        });
+    }
+    let dezArray = [4, 11, 18, 25];
+    mudaTextoFriday(dezArray);
+
+    // 6.
+    function zoom() {
+        days.addEventListener('mouseover', function (event) {
+            event.target.style.fontSize = '35px'
+        });
+    }
+    zoom ();
+
+    function removeZoom () {
+        days.addEventListener('mouseout', function (event) {
+            event.target.style.fontSize = '20px';
+        });
+        
+    }
+    removeZoom();
+
+    
