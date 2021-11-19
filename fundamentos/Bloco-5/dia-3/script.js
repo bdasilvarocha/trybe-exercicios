@@ -129,3 +129,17 @@ btnFriday(str2);
     }
     let cor = 'red';
     corDeFundoTarefa (cor);
+
+    //9. 
+    function taskSelecionada () {
+        const selecionaTask = document.querySelector('.task');
+        selecionaTask.addEventListener('click', function() {
+            if (selecionaTask.classList == 'task'){
+                selecionaTask.className = 'task selected';
+            } else {
+                selecionaTask.className = 'task';
+            }
+        });
+
+    }
+    taskSelecionada ();
