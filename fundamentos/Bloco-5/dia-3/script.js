@@ -127,7 +127,7 @@ btnFriday(str2);
         criaDiv.className = 'task';
         criaDiv.style.backgroundColor = cor;
     }
-    let cor = 'red';
+    var cor = 'red';
     corDeFundoTarefa (cor);
 
     //9. 
@@ -143,3 +143,16 @@ btnFriday(str2);
 
     }
     taskSelecionada ();
+
+    // 10.
+    const dias = document.getElementsByClassName('days');
+    function corDeFundoDia () {
+        dias.addEventListener('click', function (){
+            if (dias.style.backgroundColor == cor){
+                dias.style.backgroundColor = 'rgb(119,119,119)'
+            } else {
+                dias.style.backgroundColor = cor;
+            }
+        })
+    }
+    corDeFundoDia ();
