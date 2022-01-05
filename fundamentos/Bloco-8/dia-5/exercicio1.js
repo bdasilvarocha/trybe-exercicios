@@ -11,7 +11,7 @@ console.log('Depois do spread', ...rectangles);
 
 rectangles.forEach((rectangle) => {
   // utilizacao do spread faz com que o array se espalhe podendo ser reconhecido os pares de valores
-  rectangleArea(...rectangles) 
+  rectangleArea(...rectangle) 
   console.log(rectangle[0] * rectangle[1]);
 });
 
@@ -22,3 +22,26 @@ const sum = (...numbers) => numbers.reduce((acc, current) => acc + current);
 console.log(sum(12, 3));
 console.log(sum(15, 15, -10));
 console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, -45));
+
+// Exercicio 03
+const alex = {
+  name: 'Alex',
+  age: 26,
+  likes: ['fly fishing'],
+  nationality: 'Australian',
+};
+
+const gunnar = {
+  name: 'Gunnar',
+  age: 30,
+  likes: ['hiking', 'scuba diving', 'taking pictures'],
+  nationality: 'Icelandic',
+};
+// Usando object destructuring para acessar de forma facil os valores dos objetos
+// Aqui para nao haver conflito com as informcacoes, podemos fazer o destructuring direto nos parametros
+
+// complete a assinatura da função abaixo
+const personLikes = ({name, age, likes}) => `${name} is ${age} years old and likes ${likes.join(', ')}.`;
+
+console.log(personLikes(alex));
+console.log(personLikes(gunnar));
