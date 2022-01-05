@@ -16,3 +16,9 @@ rectangles.forEach((rectangle) => {
 });
 
 // Exercicio 02
+// O rest eh usado para nao limitar o numero de parametros que utilizamos em funcoes.
+// O reduce retorna um unico elemento de acordo com o comando inserido na funcao... Neste caso foi uma soma.
+const sum = (...numbers) => numbers.reduce((acc, current) => acc + current);
+console.log(sum(12, 3));
+console.log(sum(15, 15, -10));
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, -45));
